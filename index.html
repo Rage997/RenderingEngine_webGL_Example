@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <title>Computer Graphics: Assignment 12</title>
+    <!-- Shaders -->
+    <script src="shaders/blinn-phong.vert"></script>
+    <script src="shaders/blinn-phong.frag"></script>
+    <script src="shaders/skybox.vert"></script>
+    <script src="shaders/skybox.frag"></script>
+    <script src="shaders/shadowmap.vert"></script>
+    <script src="shaders/shadowmap.frag"></script>
+    <!-- End Shaders -->
+
+    <!-- 3D models -->
+    <script src=objects/sphere.obj></script>
+    <!-- End 3D models -->
+    <script src=objects/sphere.obj></script>
+    <script src=objects/earth_webgl.obj></script>
+    <script src=objects/daedalus_webgl.obj></script>
+    <script src=objects/moon.obj></script>
+    <script src=objects/sun.obj></script>
+    <script src=objects/iss.obj></script>
+
+
+    <!-- Includes -->
+        <script src="libraries/gl-matrix-min.js"></script>
+        <script src="GLArrayBuffer.js"></script>
+        <script src="GLTexture.js"></script>
+        <script src="GLFrameBuffer.js"></script>
+        <script src="GLProgram.js"></script>
+        <script src="GLModels.js"></script>
+        <script src="readobj.js"></script>
+        <script src="RenderingEngine.js"></script>
+        <script src="interpolate.js"></script>
+    <!-- End Includes -->
+    <body>
+        <canvas id="window" width="1280px" height="720px"></canvas>
+
+        <div style="float: left" class='controls'>
+            <div>
+                Ambient Light <input type="checkbox" id="ambient_check">
+            </div>
+
+            <div>
+                Diffuse Light <input type="checkbox" id="diffuse_check">
+            </div>
+
+            <div>
+                Specular Light <input type="checkbox" id="specular_check">
+            </div>
+
+            <div>
+                Shadow Mapping <input type="checkbox" id="shadow_check">
+            </div>
+
+            <div>
+                Camera rotation:</br><input type="range" min="-100" max="100" value="10" id="camera_rotation">
+            </div>
+            <div>
+                Camera height:</br><input type="range" min="-80" max="80" value="0" id="camera_y">
+            </div>
+            <div class="slidecontainer">
+                Camera distance:</br><input type="range" min="-30" max="70" value="100" id="camera_distance">
+            </div>
+          
+            <button id='change_btn' type="button">Current camera : </button>
+            
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
